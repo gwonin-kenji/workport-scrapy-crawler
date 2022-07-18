@@ -12,6 +12,7 @@ BOT_NAME = 'workport_crawler'
 SPIDER_MODULES = ['workport_crawler.spiders']
 NEWSPIDER_MODULE = 'workport_crawler.spiders'
 
+LOG_FILE = './workport.log'
 
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
 #USER_AGENT = 'workport_crawler (+http://www.yourdomain.com)'
