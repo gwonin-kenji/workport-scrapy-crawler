@@ -1,0 +1,26 @@
+[tool.poetry]
+name = "mynavi-data-crawler"
+version = "0.1.0"
+description = ""
+authors = ["Your Name <you@example.com>"]
+
+[tool.poetry.dependencies]
+python = "^3.9"
+beautifulsoup4 = "^4.10.0"
+Scrapy = "^2.5.1"
+python-dotenv = "^0.19.2"
+psycopg2-binary = "^2.9.3"
+SQLAlchemy = "^1.4.31"
+icecream = "^2.1.2"
+requests = "^2.27.1"
+selenium = "3.141.0"
+webdriver-manager = "^3.5.4"
+identipy = {git = "https://github.com/QuickWorkInc/identipy.git", rev = "feature/db_access_identipy"}
+
+
+[tool.poetry.dev-dependencies]
+pytest = "^5.2"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
