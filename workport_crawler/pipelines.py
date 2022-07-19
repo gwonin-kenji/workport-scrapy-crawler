@@ -116,7 +116,7 @@ class WorkportUpdatePipeline:
         self.existing_comany_data = self.db_company.select_all() if spider.company == "ON" else None
         
         self.start_urls = self.db.select_crawled_urls()
-        spider.start_urls = self.start_urls[:10] if spider.test == "ON" else self.start_urls
+        spider.start_urls = self.start_urls[:100] if spider.test == "ON" else self.start_urls
 
 
     def process_item(self, item, spider):
