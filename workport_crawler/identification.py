@@ -35,15 +35,26 @@ KEY_COL = id
 
 ENV_PATH = pathlib.Path().cwd()
 print(ENV_PATH)
+
+# TODO : 本番とテストを引数で指定して分ける
+
+# mart_adapter = DBAdapter(  # nosec
+#     dotenv_path=f"{ENV_PATH}/.env",
+#     env_db_host="MART_DB_HOST",  # DB_HOST # SD_DB_HOST # MART_DB_HOST
+#     env_db_name="MART_DB_NAME",  # DB_NAME # SD_DB_NAME # MART_DB_NAME
+#     env_db_user="MART_DB_USER",  # DB_USER # SD_DB_USER # MART_DB_USER
+#     env_db_pass="MART_DB_PASS",  # DB_PASS # SD_DB_PASS # MART_DB_PASS
+#     db_type="postgresql",
+# )
+
 mart_adapter = DBAdapter(  # nosec
     dotenv_path=f"{ENV_PATH}/.env",
-    env_db_host="MART_DB_HOST",  # DB_HOST # SD_DB_HOST # MART_DB_HOST
-    env_db_name="MART_DB_NAME",  # DB_NAME # SD_DB_NAME # MART_DB_NAME
-    env_db_user="MART_DB_USER",  # DB_USER # SD_DB_USER # MART_DB_USER
-    env_db_pass="MART_DB_PASS",  # DB_PASS # SD_DB_PASS # MART_DB_PASS
+    env_db_host="DB_HOST",  # DB_HOST # SD_DB_HOST # MART_DB_HOST
+    env_db_name="DB_NAME",  # DB_NAME # SD_DB_NAME # MART_DB_NAME
+    env_db_user="DB_USER",  # DB_USER # SD_DB_USER # MART_DB_USER
+    env_db_pass="DB_PASS",  # DB_PASS # SD_DB_PASS # MART_DB_PASS
     db_type="postgresql",
 )
-
 
 class DBStartupCompanies(BASE):
     """
